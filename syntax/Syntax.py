@@ -37,3 +37,11 @@ class syntax_analyzer(object):
             return True
         else:
             return False
+
+
+    def isType(self, token):
+        if  token.tokenval == TokenVal.FLOAT_TYPE.value or
+        token.tokenval == TokenVal.INTEGER_TYPE.value:
+            return True
+        else:
+            return False
