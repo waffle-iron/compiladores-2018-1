@@ -14,6 +14,8 @@ class syntax_analyzer(object):
             return False
 
 
+
+
     def isSumOperator(self, token):
         if token.tokenval == TokenVal.PLUS.value or token.tokenval == TokenVal.MINUS.value:
             return True
@@ -23,6 +25,15 @@ class syntax_analyzer(object):
 
     def isMultiOperator(self, token):
         if token.tokenval == TokenVal.TIMES.value or token.tokenval == TokenVal.DIVISION.value:
+            return True
+        else:
+            return False
+
+
+    def isRelationalOperator(self, token):
+        if token.tokenval == TokenVal.LOGIC_EQUALS.value or token.tokenval == TokenVal.HIGHER.value or
+        token.tokenval == TokenVal.LESS.value or token.tokenval == TokenVal.LESS_EQUALS.value or
+        token.tokenval == TokenVal.HIGHER_EQUALS.value:
             return True
         else:
             return False
